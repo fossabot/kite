@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 pushd terraform
-BASTION_IP="$(terraform output bastion_ip)"
+BASTION_IP="$(terraform output -module bosh bastion_ip)"
 popd
 
 export BASTION_IP
